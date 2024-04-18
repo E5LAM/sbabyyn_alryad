@@ -56,15 +56,37 @@ const typed = new Typed('.multiple-text' , {
 
 })
 
-$(document).ready(function() {
-    $(function(){
-        $('#menu-icon').click(function(){
-            $('.navbar-phone').slideToggle(500);
-        })
-    })
-    $(function(){
-        $('.nav-item').click(function(){
-            $('.navbar-phone').slideUp(500);
-        })
-    })
-  });
+// $(document).ready(function() {
+//     $(function(){
+//         $('#menu-icon').click(function(){
+//             $('.navbar-phone').slideToggle(500);
+//         })
+//     })
+//     $(function(){
+//         $('.nav-item').click(function(){
+//             $('.navbar-phone').slideUp(500);
+//         })
+//     })
+// });
+
+function hideSlider(){
+    const menuIcon = document.getElementById("menu-icon");
+    menuIcon.style.display = 'none';
+    const closeIcon = document.getElementById("close-icon");
+    closeIcon.style.display = 'flex';
+  
+    const navToggle = document.querySelector(".navbar-phone");
+    navToggle.style.top = '8.5%';
+  }
+  
+  function showSlider(){
+    const menuIcon = document.getElementById("menu-icon");
+    menuIcon.style.display = 'flex';
+    const closeIcon = document.querySelector("#close-icon");
+    closeIcon.style.display = 'none';
+    const navToggle = document.querySelector(".navbar-phone");
+    navToggle.style.top = '-50%';
+  }
+  
+  
+  
